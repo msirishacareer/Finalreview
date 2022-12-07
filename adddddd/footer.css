@@ -1,0 +1,502 @@
+Skip to content
+DEV Community 👩‍💻👨‍💻
+Search...
+
+Log in
+Create account
+
+22
+Like
+6
+Jump to Comments
+36
+Save
+
+Cover image for Responsive Footer Design using HTML and CSS
+Shantanu Jana
+Shantanu Jana
+Posted on Dec 27, 2021
+
+Responsive Footer Design using HTML and CSS
+#
+html
+#
+css
+#
+beginners
+#
+webdev
+In this article, you will learn how to create a Responsive Footer Design using HTML and CSS. Earlier I shared many more types of simple footer design tutorials with you. The design that I have shown in this tutorial is very simple and easy. Will be very suitable for different types of personal websites or business websites.
+
+Live Demo: https://codepen.io/codemediaweb/full/RwZzQme
+
+It is made fully responsive so that it can be easily used on any device. CSS's Flexbox has been used to make it responsive. With the help of Flexbox, no separate CSS code had to be added to make it responsive.
+
+📌📌 I have already shared step by step tutorial. If you have difficulty understanding the code, you can follow the tutorial.
+
+HTML Code:
+<footer>
+<div class="row primary">
+  <div class="column about">
+
+  <h3>Foolish Developer</h3>
+
+   <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+      voluptatem corporis error non,
+  </p>
+
+  <div class="social">
+    <i class="fa-brands fa-facebook-square"></i>
+    <i class="fa-brands fa-instagram-square"></i>
+    <i class="fa-brands fa-twitter-square"></i>
+    <i class="fa-brands fa-youtube-square"></i>
+    <i class="fa-brands fa-whatsapp-square"></i>
+  </div>
+</div>
+
+<div class="column links">
+<h3>Some Links</h3>
+
+ <ul>
+
+  <li>
+   <a href="#faq">F.A.Q</a>
+  </li>
+  <li>
+   <a href="#cookies-policy">Cookies Policy</a>
+  </li>
+  <li>
+   <a href="#terms-of-services">Terms Of Service</a>
+  </li>
+  <li>
+   <a href="#support">Support</a>
+  </li>
+ </ul>
+
+</div>
+
+
+<div class="column links">
+  <h3>Some Links</h3>
+   <ul>
+    <li>
+     <a href="#faq">F.A.Q</a>
+    </li>
+    <li>
+     <a href="#cookies-policy">Cookies Policy</a>
+    </li>
+    <li>
+    <a href="#terms-of-services">Terms Of Service</a>
+    </li>
+    <li>
+    <a href="#support">Support</a>
+    </li>
+  </ul>
+</div>
+
+<div class="column subscribe">
+ <h3>Newsletter</h3>
+  <div>
+   <input type="email" placeholder="Your email id here" />
+   <button>Subscribe</button>
+  </div>
+
+</div>
+
+</div>
+
+<div class="row copyright">
+  <div class="footer-menu">
+
+  <a href="">Home</a>
+  <a href="">About</a>
+  <a href="">Contact</a>
+  <a href="">Blog</a>
+  <a href="">Social</a>
+
+  </div>
+   <p>Copyright &copy; 2021 Foolish Developer</p>
+</div>
+</footer>
+CSS Code:
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+}
+footer {
+  background-color: #121315;
+  color: #a7a7a7;
+  font-size: 16px;
+}
+footer * {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+.row {
+  padding: 1em 1em;
+}
+.row.primary {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  align-items: stretch;
+}
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+  min-height: 15em;
+}
+h3 {
+  width: 100%;
+  text-align: left;
+  color: white;
+  font-size: 1.4em;
+  white-space: nowrap;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+li:not(:first-child) {
+  margin-top: 0.8em;
+}
+ul li a {
+  color: #a7a7a7;
+  text-decoration: none;
+}
+ul li a:hover {
+  color: #2a8ded;
+}
+.about p {
+  text-align: justify;
+  line-height: 2;
+  margin: 0;
+}
+input,
+button {
+  font-size: 1em;
+  padding: 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+button {
+  background-color: #c7940a;
+  color: #ffffff;
+}
+div.social {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.4em;
+  flex-direction: row;
+  margin-top: 0.5em;
+}
+.social i {
+  color: #bac6d9;
+}
+
+.copyright {
+  padding: 0.3em 1em;
+  background-color: #25262e;
+}
+.footer-menu{
+  float: left;
+    margin-top: 10px;
+}
+
+.footer-menu a{
+  color: #cfd2d6;
+  padding: 6px;
+
+  text-decoration: none;
+}
+.footer-menu a:hover{
+  color: #27bcda;
+}
+.copyright p {
+  font-size: 0.9em;
+  text-align: right;
+}
+@media screen and (max-width: 850px) {
+  .row.primary {
+    grid-template-columns: 1fr;
+  }
+
+}
+You can download the source code if you want.
+
+Top comments (6)
+
+Subscribe
+pic
+Add to the discussion
+ 
+ 
+deathshadow60 profile image
+deathshadow60
+•
+Jan 2
+
+I find it highly unlikely that the footer sections would be at H3 depth for the headings. Just exactly which H2 on a page would they be marking the start of subsections of?
+
+Remember, H3 marks the start of a subsection of the section started by an H2 preceding it. Just as H4 means the start of a subsection of the H3 preceding it, and H1 is THE (singular) head*ING* (singular) that everything on EVERY page of a website is a subsection of, and H2 marks the start of a major subsection of the current page. The first H2 indicating the start of the main content unless you use the MAIN tag.
+
+They do not mean fonts in different weights and sizes.
+
+developer.mozilla.org/en-US/docs/W...
+
+It's also a bit of a wonk that you're using presentational classes. Since non-visual UA's likely won't even have rows and columns, and even visually when that media query kicks in you no longer have columns. Visual concepts like that have no business in your HTML, even as classes. This is why HTML/CSS frameworks are inherently incompetent trash!
+
+Your media query and many of your values also have issues in that you're using EM/REM fonts. As a large font user on all my machines, 1REM !== 16px. My laptop it's 20, my workstation it's 24, my media center it's 32. When 1REM == 32px your 850px media query is too small, so it doesn't trigger soon enough.
+
+PX in general are inaccessible trash, just begging to get you in trouble. It's called EM/REM, use 'em!
+
+I also think that grid might be the wrong tool for the job here. You end up micro-managing a lot of values that flex-wrap could handle with more aplomb.
+
+It's also wrong to just dump the semantically neutral anchor tag in all by its lonesome for a menu. Get your UL/LI in there.
+
+Check this pen rewrite I just belted out:
+codepen.io/jason-knight/pen/poWpLz...
+
+Which handles being responsive a bit better, and fixes all the issues I just outlined.
+
+
+2
+ likes
+Like
+Reply
+ 
+ 
+shantanu_jana profile image
+Shantanu Jana 
+•
+Jan 3
+
+Thank you for guiding me
+
+
+1
+ like
+Like
+Reply
+ 
+ 
+marcellahaller profile image
+marcellahaller
+•
+Apr 17
+Comment hidden by post author
+ 
+ 
+spandyboss profile image
+SpandyBoss
+•
+Dec 28 '21
+
+Noice Design loved it.
+Keep it up
+
+And I don't know why no one comments on my posts ?
+
+
+3
+ likes
+Like
+Reply
+ 
+ 
+atulcodex profile image
+🚩 Atul Prajapati 🇮🇳
+•
+Dec 29 '21
+
+Nice project, I have learned to make footer from youtube in 2018
+that was a great experience
+
+thanks for sharing :)
+
+
+2
+ likes
+Like
+Reply
+ 
+ 
+shantanu_jana profile image
+Shantanu Jana 
+•
+Dec 29 '21
+
+Welcome
+
+
+2
+ likes
+Like
+Reply
+Some comments have been hidden by the post's author - find out more
+
+Code of Conduct • Report abuse
+🌚 Browsing with dark mode makes you a better developer.
+It's a scientific fact.
+
+Read next
+nathannosudo profile image
+The Beginners Guide to Landing a Junior Developer Role
+Nathan Orris - Dec 5
+
+rinkiyakedad profile image
+Kubernetes Cheat Sheet: Must-Know Commands and Examples
+Arsh Sharma - Dec 5
+
+fruntend profile image
+Top-10 Posts for FE (Week 1, Dec 2022)
+fruntend - Dec 5
+
+mavensingh profile image
+Simulate a Mouse Click Using JavaScript
+Kuldeep Singh - Dec 5
+
+
+Shantanu Jana
+Follow
+If you want to hire me to write any technical content, you can email me. codesuspance@gmail.com
+LOCATION
+india
+JOINED
+May 11, 2021
+More from Shantanu Jana
+How to Play Sound on Button Click in JavaScript
+#javascript #webdev #beginners #html
+How to Create a Draggable Div in JavaScript
+#javascript #webdev #beginners #html
+How to Create Random Quote Generator in JavaScript
+#javascript #webdev #beginners #html
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+}
+footer {
+  background-color: #121315;
+  color: #a7a7a7;
+  font-size: 16px;
+}
+footer * {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+.row {
+  padding: 1em 1em;
+}
+.row.primary {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  align-items: stretch;
+}
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+  min-height: 15em;
+}
+h3 {
+  width: 100%;
+  text-align: left;
+  color: white;
+  font-size: 1.4em;
+  white-space: nowrap;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+li:not(:first-child) {
+  margin-top: 0.8em;
+}
+ul li a {
+  color: #a7a7a7;
+  text-decoration: none;
+}
+ul li a:hover {
+  color: #2a8ded;
+}
+.about p {
+  text-align: justify;
+  line-height: 2;
+  margin: 0;
+}
+input,
+button {
+  font-size: 1em;
+  padding: 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+button {
+  background-color: #c7940a;
+  color: #ffffff;
+}
+div.social {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.4em;
+  flex-direction: row;
+  margin-top: 0.5em;
+}
+.social i {
+  color: #bac6d9;
+}
+
+.copyright {
+  padding: 0.3em 1em;
+  background-color: #25262e;
+}
+.footer-menu{
+  float: left;
+    margin-top: 10px;
+}
+
+.footer-menu a{
+  color: #cfd2d6;
+  padding: 6px;
+
+  text-decoration: none;
+}
+.footer-menu a:hover{
+  color: #27bcda;
+}
+.copyright p {
+  font-size: 0.9em;
+  text-align: right;
+}
+@media screen and (max-width: 850px) {
+  .row.primary {
+    grid-template-columns: 1fr;
+  }
+
+}
+DEV Community 👩‍💻👨‍💻 — A constructive and inclusive social network for software developers. With you every step of your journey.
+
+Built on Forem — the open source software that powers DEV and other inclusive communities.
+
+Made with love and Ruby on Rails. DEV Community 👩‍💻👨‍💻 © 2016 - 2022.
